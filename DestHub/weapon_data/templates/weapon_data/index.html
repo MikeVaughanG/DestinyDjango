@@ -1,0 +1,12 @@
+{% if weaponlist %}
+    <ul>
+    <center>
+    <div style="height:240px;width:120px;border:2px solid grey;overflow:auto;">
+    {% for weapon in weaponlist %}
+        <li><a href="{{ weapon.id }}/results">{{ weapon.weapon_name }}</a></li>
+    {% endfor %}
+    </center>
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

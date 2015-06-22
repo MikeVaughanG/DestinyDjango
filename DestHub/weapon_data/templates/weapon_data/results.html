@@ -1,0 +1,24 @@
+{% if weapon %}
+<style>
+body {
+    background-color: MidnightBlue;
+}
+.boxed {
+    border: 2px ridge grey;
+    background-color: darkgrey;
+}
+</style>
+<body>
+    <div class="boxed">
+    <ul>
+        <center><b>{{ weapon.weapon_name }}</b></center>
+        
+        <center>{{ weapon.weapon_descrip }}</center>
+        
+        <center><b><font color = {{ color }}>{{ weapon.weapon_tier }}</font></b></center>
+    </ul>
+    </div>
+</body>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
